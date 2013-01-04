@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Development version of web.xml file -->
+
+<web-app>
+
+    <!-- Set up ******************************************** -->
+    <display-name>go</display-name>
+    <description>
+        GoldenOpportunities
+    </description>
+
+    <session-config>
+      <session-timeout>480</session-timeout>
+    </session-config>
+
+    <welcome-file-list>
+      <welcome-file>/index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Servlet config/mapping ******************************************** -->
+    <servlet>
+        <servlet-name>go</servlet-name>
+        <servlet-class>com.goldenop</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>go</servlet-name>
+        <url-pattern>/go</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>encrypt</servlet-name>
+        <servlet-class>com.goldenop.encrypt</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>encrypt</servlet-name>
+        <url-pattern>/encrypt</url-pattern>
+    </servlet-mapping>
+
+
+
+    <!-- Environment Entries ******************************************** -->
+    <env-entry>
+      <env-entry-name>SystemName</env-entry-name>
+      <env-entry-value>GoldenOpportunities</env-entry-value>
+      <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+    <env-entry>
+      <env-entry-name>SystemAcronym</env-entry-name>
+      <env-entry-value>go</env-entry-value>
+      <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+
+    <env-entry>
+      <env-entry-name>AppSchema</env-entry-name>
+      <env-entry-value>go</env-entry-value>
+      <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+
+    <env-entry>
+      <env-entry-name>ProductionStatus</env-entry-name>
+      <env-entry-value>dev</env-entry-value>
+      <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+
+    <env-entry>
+      <env-entry-name>PathToRoot</env-entry-name>
+      <env-entry-value>C:\Program Files\Apache Software Foundation\Tomcat 6.0\webapps\ROOT</env-entry-value>
+      <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+
+</web-app>
